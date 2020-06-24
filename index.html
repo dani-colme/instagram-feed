@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/51152ee900.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="btnContainer">
+  <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+  <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+</div>
+<div class="row">
+<div class="column">
+    <h6> mi primer instagram </h6><div class="number"></div>
+<div><img class="thumb" src="https://image.freepik.com/foto-gratis/actuacion-bailarines-ballet-tiro-completo_23-2148229596.jpg" alt="Actuación de bailarines de ballet de tiro completo. Foto gratis" width="300px" height="300px" data-pin-no-hover="true" onerror="this.onerror=null;ga('send', 'event', 'broken_image', 'detail', '23_5020937');"></div>
+<h5> 23 likes</h5>
+<i class="fa fa-commenting-o" aria-hidden="true"></i>
+</div>
+<div class="column">
+<p> mi primer instagram</p>
+<div><img class="thumb" src="https://image.freepik.com/foto-gratis/retrato-grupo-adorables-cachorros_53876-64778.jpg" alt="Retrato de grupo de adorables cachorros Foto gratis" width="300px" height="300px" data-pin-no-hover="true" onerror="this.onerror=null;ga('send', 'event', 'broken_image', 'detail', '53876_3532149');"></div>
+<h5> 24 likes</h5>
+<i class="fa fa-commenting-o" aria-hidden="true"></i>
+</div>
+</div>
+<div class="row">
+<div class="column">
+<p> mi primer instagram<p>
+<div><img class="thumb" src="https://image.freepik.com/foto-gratis/movimiento-pincel-amarillo-abstracto-sobre-fondo-blanco_23-2147835995.jpg" alt="Movimiento de pincel amarillo abstracto sobre fondo blanco Foto gratis" width="300px" height="300px" data-pin-no-hover="true" onerror="this.onerror=null;ga('send', 'event', 'broken_image', 'detail', '23_2499019');"></div>
+<h5> 34 likes</h5>
+<i class="fa fa-commenting-o" aria-hidden="true"></i>
+</div>
+<div class="column">
+<p> mi primer instagram</p>
+<div><img id="details-enlarged-image" class="js-search-result-thumbnail responsive-img" src="https://as1.ftcdn.net/jpg/03/53/56/72/500_F_353567222_wEhOl6h1A8mGNKGVhsTVDD5YGXsFAsZw.jpg" alt="3D cartoon character fun teenager" width="300px" height="300px" itemprop="thumbnail" data-content-id="353567222"></div>
+<p>45 likes</p>
+<i class="fa fa-commenting-o" aria-hidden="true"></i>
+</div>
+</div>
+</div>
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
